@@ -9,11 +9,16 @@ format:
 
 
 ```{r}
-library(palmerpenguins)
+
 library(dplyr)
 library(ggplot2)
 
-df <- palmerpenguins::penguins
+con <- DBI::dbConnect(
+  duckdb::duckdb(), 
+  dbdir = "my-db.duckdb"
+  )
+df <- dplyr::tbl(con, "penguins")
+
 ```
 
 
@@ -22,10 +27,11 @@ df %>%
   group_by(species, sex) %>%
   summarise(
     across(
-      where(is.numeric), 
+        ends_with("mm") | ends_with("g"),
       \(x) mean(x, na.rm = TRUE)
       )
     ) %>%
+  dplyr::collect() %>%
   knitr::kable()
 ```
 
@@ -38,3 +44,10 @@ df %>%
   geom_point() + 
   geom_smooth(method = "lm")
 ```
+
+```{r}
+DBI::dbDisconnect(conn = con, shutdown = TRUE)
+rm(con)
+gc()
+```
+

@@ -6,3 +6,4 @@ v = VetiverModel.from_pin(b, 'penguin_model')
 
 app = VetiverAPI(v, check_prototype=True)
 
+app.run(port = 8080)
