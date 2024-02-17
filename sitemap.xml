@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://VidicL13.github.io/DevOps4DS/model.html</loc>
-    <lastmod>2024-01-28T20:12:21.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://VidicL13.github.io/DevOps4DS/eda.html</loc>
-    <lastmod>2024-01-28T20:12:21.875Z</lastmod>
-  </url>
-  <url>
     <loc>https://VidicL13.github.io/DevOps4DS/index.html</loc>
-    <lastmod>2024-01-28T20:12:21.875Z</lastmod>
+    <lastmod>2024-02-17T14:21:13.542Z</lastmod>
   </url>
   <url>
     <loc>https://VidicL13.github.io/DevOps4DS/about.html</loc>
-    <lastmod>2024-01-28T20:12:21.875Z</lastmod>
+    <lastmod>2024-02-17T14:21:13.538Z</lastmod>
+  </url>
+  <url>
+    <loc>https://VidicL13.github.io/DevOps4DS/eda.html</loc>
+    <lastmod>2024-02-17T14:21:13.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://VidicL13.github.io/DevOps4DS/model.html</loc>
+    <lastmod>2024-02-17T14:21:13.542Z</lastmod>
   </url>
 </urlset>
