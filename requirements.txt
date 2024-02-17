@@ -37,7 +37,6 @@ idna==3.6
 importlib-metadata==7.0.1
 importlib-resources==6.1.1
 ipykernel==6.28.0
-ipython==8.18.1
 ipywidgets==8.1.1
 isoduration==20.11.0
 jedi==0.19.1
@@ -97,7 +96,6 @@ python-dateutil==2.8.2
 python-json-logger==2.0.7
 python-multipart==0.0.6
 pytz==2023.3.post1
-pywin32==306
 pywinpty==2.0.12
 PyYAML==6.0.1
 pyzmq==25.1.2
