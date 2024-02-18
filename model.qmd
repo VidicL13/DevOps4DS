@@ -50,13 +50,20 @@ print(f"Coefficients {model.coef_}")
 
 ```{python}
 from vetiver import VetiverModel, vetiver_pin_write
+import s3fs
 import pins
 v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
 
-board = pins.board_folder("data/model/", versioned=True, allow_pickle_read=True)
+board = pins.board_s3("do4ds-lab-bucket", allow_pickle_read=True)
 vetiver_pin_write(board, v)
+```
 
 
+## Create vetiver Docker files
 
+```{python}
+from vetiver import prepare_docker
+
+prepare_docker(board = board, pin_name = "penguin_model", path )
 ```
 
