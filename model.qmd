@@ -62,6 +62,7 @@ vetiver_pin_write(board, v)
 ## Create vetiver Docker files
 
 ```{python}
+#| eval: false
 from vetiver import prepare_docker
 
 prepare_docker(board = board, pin_name = "penguin_model")
