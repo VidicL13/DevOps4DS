@@ -64,6 +64,6 @@ vetiver_pin_write(board, v)
 ```{python}
 from vetiver import prepare_docker
 
-prepare_docker(board = board, pin_name = "penguin_model", path )
+prepare_docker(board = board, pin_name = "penguin_model")
 ```
 
