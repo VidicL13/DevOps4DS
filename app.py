@@ -3,7 +3,7 @@ import vetiver
 import pins
 
 
-b = pins.board_folder('/data/model', allow_pickle_read=True)
+b = pins.board_folder('./data/model', allow_pickle_read=True)
 v = VetiverModel.from_pin(b, 'penguin_model')
 
 vetiver_api = vetiver.VetiverAPI(v)
