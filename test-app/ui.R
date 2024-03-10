@@ -13,23 +13,41 @@ library(shiny)
 
 # Define UI for application that draws a histogram
 fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotOutput("distPlot")
-        )
+  titlePanel("Penguin Mass Predictor"),
+  
+  # Model input values
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(
+        "bill_length",
+        "Bill Length (mm)",
+        min = 30,
+        max = 60,
+        value = 45,
+        step = 0.1
+      ),
+      selectInput(
+        "sex",
+        "Sex",
+        c("Male", "Female")
+      ),
+      selectInput(
+        "species",
+        "Species",
+        c("Adelie", "Chinstrap", "Gentoo")
+      ),
+      # Get model predictions
+      actionButton(
+        "predict",
+        "Predict"
+      )
+    ),
+    
+    mainPanel(
+      h2("Penguin Parameters"),
+      verbatimTextOutput("vals"),
+      h2("Predicted Penguin Mass (g)"),
+      textOutput("pred")
     )
+  )
 )
