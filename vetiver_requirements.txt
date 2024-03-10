@@ -120,6 +120,7 @@ scikit-learn==1.4.1.post1
     #   vetiver
 scipy==1.12.0
     # via scikit-learn
+s3fs==2024.2.0
 semver==2.13.0
     # via rsconnect-python
 six==1.16.0
@@ -151,7 +152,7 @@ typing-extensions==4.9.0
     #   uvicorn
 tzdata==2024.1
     # via pandas
-urllib3==2.2.1
+urllib3==1.26
     # via requests
 uvicorn==0.27.1
     # via vetiver
