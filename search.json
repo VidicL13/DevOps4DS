@@ -32,7 +32,7 @@
     "href": "eda.html#penguin-size-vs-mass-by-species",
     "title": "Penguins EDA",
     "section": "Penguin Size vs Mass by Species",
-    "text": "Penguin Size vs Mass by Species\n\n\nCode\ndf %&gt;%\n  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\nCode\nDBI::dbDisconnect(conn = con, shutdown = TRUE)\nrm(con)\ngc()\n\n\n          used  (Mb) gc trigger  (Mb) max used (Mb)\nNcells 2622285 140.1    5035822 269.0  5035822  269\nVcells 4733040  36.2   10146329  77.5  7074190   54"
+    "text": "Penguin Size vs Mass by Species\n\n\nCode\ndf %&gt;%\n  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\nCode\nDBI::dbDisconnect(conn = con, shutdown = TRUE)\nrm(con)\ngc()\n\n\n          used  (Mb) gc trigger  (Mb) max used (Mb)\nNcells 2622285 140.1    5035822 269.0  5035822  269\nVcells 4733040  36.2   10146329  77.5  7074186   54"
   },
   {
     "objectID": "model.html",
@@ -67,7 +67,7 @@
     "href": "model.html#save-the-model",
     "title": "Model",
     "section": "save the model",
-    "text": "save the model\n\n\nCode\nfrom vetiver import VetiverModel, vetiver_pin_write\nimport s3fs\nimport pins\nv = VetiverModel(model, model_name='penguin_model', prototype_data=X)\nboard = pins.board_s3(\n  \"do4ds-lab-bucket\",\n  allow_pickle_read=True) \n\nvetiver_pin_write(board, v)\n\n\nModel Cards provide a framework for transparent, responsible reporting. \n Use the vetiver `.qmd` Quarto template as a place to start, \n with vetiver.model_card()\nWriting pin:\nName: 'penguin_model'\nVersion: 20240310T201508Z-0f6c7"
+    "text": "save the model\n\n\nCode\nfrom vetiver import VetiverModel, vetiver_pin_write\nimport s3fs\nimport pins\nv = VetiverModel(model, model_name='penguin_model', prototype_data=X)\nboard = pins.board_s3(\n  \"do4ds-lab-bucket\",\n  allow_pickle_read=True) \n\nvetiver_pin_write(board, v)\n\n\nModel Cards provide a framework for transparent, responsible reporting. \n Use the vetiver `.qmd` Quarto template as a place to start, \n with vetiver.model_card()\nWriting pin:\nName: 'penguin_model'\nVersion: 20240310T202430Z-0f6c7"
   },
   {
     "objectID": "model.html#create-vetiver-docker-files",
