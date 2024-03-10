@@ -53,9 +53,12 @@ from vetiver import VetiverModel, vetiver_pin_write
 import s3fs
 import pins
 v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
+board = pins.board_s3(
+  "do4ds-lab-bucket",
+  allow_pickle_read=True) 
 
-board = pins.board_s3("do4ds-lab-bucket", allow_pickle_read=True)
 vetiver_pin_write(board, v)
+
 ```
 
 
